@@ -1,23 +1,33 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CorrectPieces : MonoBehaviour
 {
     public PieceData[] validPieces;
+    public GameObject currentPiece;
 
-    public bool IsPieceValid(PieceData piece) // Comprueba si la pieza es del tipo que admite la celda.
+    public bool IsPieceValid(PieceData piece)
     {
         foreach (PieceData valid in validPieces)
         {
             if (valid == piece)
-            {
-                Debug.Log("Pieza correcta en el hueco correcto");
                 return true;
-            }
         }
-
-        Debug.Log("Pieza incorrecta en el hueco.");
         return false;
+    }
+
+    public int GetScore()
+    {
+        if (currentPiece == null) return 0;
+
+        TypePiece pieceScript = currentPiece.GetComponent<TypePiece>();
+        if (pieceScript != null && IsPieceValid(pieceScript.pieceData))
+            return 1;
+
+        return 0;
+    }
+
+    public void SetPiece(GameObject piece)
+    {
+        currentPiece = piece;
     }
 }

@@ -101,12 +101,12 @@ public class MovePieces : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDr
         if (nearestPosCell != null && minDistance < pieceThreshold) // Si hay una celda disponible y a menor distancia del umbral marcado, la pieza se pone en la posición de dicha celda.
         {
             piecesPos.anchoredPosition = nearestPosCell.anchoredPosition;
-            Debug.Log("La pieza está bien colocada.");
+            //Debug.Log("La pieza está bien colocada.");
         }
         else
         {
             piecesPos.anchoredPosition = posInicial;
-            Debug.Log("La pieza está mal colocada.");
+            //Debug.Log("La pieza está mal colocada.");
         }
 
         if (lastHighlightedCell != null)
@@ -115,7 +115,7 @@ public class MovePieces : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDr
             lastHighlightedCell = null;
         }
 
-        nearestCell = null; // Resetea la información guardada.
+        nearestCell = null;
 
         CorrectPieces cellScript = nearestPosCell.GetComponent<CorrectPieces>();
         TypePiece pieceScript = this.GetComponent<TypePiece>();
@@ -125,11 +125,16 @@ public class MovePieces : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDr
             if (cellScript.IsPieceValid(pieceScript.pieceData))
             {
                 piecesPos.anchoredPosition = nearestPosCell.anchoredPosition;
-                Debug.Log("Pieza correcta en esta celda.");
+                cellScript.SetPiece(this.gameObject);
             }
             else
-                Debug.Log("Pieza incorrecta para esta celda.");
+                cellScript.SetPiece(null);
         }
+    }
+
+    public void ReturnToStart()
+    {
+        piecesPos.anchoredPosition = posInicial;
     }
     #endregion
 }
