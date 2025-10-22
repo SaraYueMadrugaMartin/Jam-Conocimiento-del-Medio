@@ -10,7 +10,12 @@ public class MovePieces : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDr
     private RectTransform piecesPos; // Posición de la pieza movible.
 
     private Vector2 posInicial; // Posicion inicial de la pieza que se mueve.
+    [SerializeField] private float pieceThreshold = 150f;
     private List<RectTransform> cellPos; // Lista con las posiciones de todas las celdas posibles para poner las piezas.
+
+    private HoverCell nearestCell = null;
+    private HoverCell lastHighlightedCell;
+    [SerializeField] private float hoverThreshold = 150f;
     #endregion
 
     #region Basic Functions
@@ -20,6 +25,7 @@ public class MovePieces : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDr
         canvas = GetComponentInParent<Canvas>();
         canvasGroup = GetComponent<CanvasGroup>();
         cellPos = new List<RectTransform>();
+
         posInicial = piecesPos.anchoredPosition; // Guarda la posición inicial de la pieza.
 
         if (canvasGroup == null)
@@ -40,7 +46,37 @@ public class MovePieces : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDr
     public void OnDrag(PointerEventData eventData)
     {
         piecesPos.anchoredPosition += eventData.delta / canvas.scaleFactor;
-        Debug.Log("Estás moviendo la pieza.");
+        //Debug.Log("Estás moviendo la pieza.");
+
+        HoverCell closestCell = null;
+        float minDistance = Mathf.Infinity;
+
+        foreach (RectTransform cell in cellPos)
+        {
+            float dist = Vector2.Distance(piecesPos.anchoredPosition, cell.anchoredPosition);
+
+            if (dist < minDistance)
+            {
+                minDistance = dist;
+                closestCell = cell.GetComponent<HoverCell>();
+            }
+        }
+
+        if (minDistance < hoverThreshold)
+            nearestCell = closestCell;
+        else
+            nearestCell = null;
+
+        if (nearestCell != lastHighlightedCell)
+        {
+            if (lastHighlightedCell != null)
+                lastHighlightedCell.SetHighlight(false);
+
+            if (nearestCell != null)
+                nearestCell.SetHighlight(true);
+
+            lastHighlightedCell = nearestCell;
+        }
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -62,16 +98,24 @@ public class MovePieces : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDr
             }
         }
 
-        if (nearestPosCell != null && minDistance < 100f) // Si hay una celda disponible y a menor distancia del umbral marcado, la pieza se pone en la posición de dicha celda.
+        if (nearestPosCell != null && minDistance < pieceThreshold) // Si hay una celda disponible y a menor distancia del umbral marcado, la pieza se pone en la posición de dicha celda.
         {
             piecesPos.anchoredPosition = nearestPosCell.anchoredPosition;
             Debug.Log("La pieza está bien colocada.");
         }
-        else // Si no hay registrada ninguna celda y el umbral es mayor, la pieza vuelve a su posición inicial.
+        else
         {
             piecesPos.anchoredPosition = posInicial;
             Debug.Log("La pieza está mal colocada.");
         }
+
+        if (lastHighlightedCell != null)
+        {
+            lastHighlightedCell.SetHighlight(false);
+            lastHighlightedCell = null;
+        }
+
+        nearestCell = null;
     }
     #endregion
 }
