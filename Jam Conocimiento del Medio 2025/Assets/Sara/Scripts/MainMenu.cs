@@ -5,6 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    [SerializeField] private GameObject panelCredits;
+
+    private void Start()
+    {
+        panelCredits.SetActive(false);
+    }
+
     public void PlayGame()
     {
         SceneManager.LoadScene("01_Level01");
@@ -12,7 +19,12 @@ public class MainMenu : MonoBehaviour
 
     public void Credits()
     {
-        SceneManager.LoadScene("Credits");
+        panelCredits.SetActive(true);
+    }
+
+    public void ClosePanelCredits()
+    {
+        panelCredits.SetActive(false);
     }
 
     public void ExitGame()
