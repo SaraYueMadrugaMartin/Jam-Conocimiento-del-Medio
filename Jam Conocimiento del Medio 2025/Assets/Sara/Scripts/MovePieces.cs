@@ -115,7 +115,21 @@ public class MovePieces : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDr
             lastHighlightedCell = null;
         }
 
-        nearestCell = null;
+        nearestCell = null; // Resetea la información guardada.
+
+        CorrectPieces cellScript = nearestPosCell.GetComponent<CorrectPieces>();
+        TypePiece pieceScript = this.GetComponent<TypePiece>();
+
+        if (cellScript != null && pieceScript != null)
+        {
+            if (cellScript.IsPieceValid(pieceScript.pieceData))
+            {
+                piecesPos.anchoredPosition = nearestPosCell.anchoredPosition;
+                Debug.Log("Pieza correcta en esta celda.");
+            }
+            else
+                Debug.Log("Pieza incorrecta para esta celda.");
+        }
     }
     #endregion
 }
