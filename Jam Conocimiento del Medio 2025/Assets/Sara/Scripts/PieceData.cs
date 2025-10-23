@@ -11,8 +11,9 @@ public enum PieceType
 {
     Vertical,
     Horizontal,
-    TUp,
-    TDown,
-    LRight,
-    LLeft
+    EsqUpRight,
+    EsqUpLeft,
+    EsqDownRight,
+    EsqDownLeft,
+    Pipa
 }

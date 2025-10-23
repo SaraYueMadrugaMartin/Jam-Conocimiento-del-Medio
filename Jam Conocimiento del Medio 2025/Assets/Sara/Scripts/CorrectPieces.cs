@@ -1,9 +1,13 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class CorrectPieces : MonoBehaviour
 {
-    public PieceData[] validPieces;
-    public GameObject currentPiece;
+    [SerializeField] private PieceData[] validPieces;
+    [SerializeField] public GameObject currentPiece;
+    public static List<RectTransform> pathPosition = new List<RectTransform>();
+
+    [HideInInspector] public PuzzleManager puzzleManager;
 
     public bool IsPieceValid(PieceData piece)
     {
@@ -15,19 +19,25 @@ public class CorrectPieces : MonoBehaviour
         return false;
     }
 
-    public int GetScore()
+    public void UpdatePath()
     {
-        if (currentPiece == null) return 0;
+        if (currentPiece == null) return;
 
         TypePiece pieceScript = currentPiece.GetComponent<TypePiece>();
-        if (pieceScript != null && IsPieceValid(pieceScript.pieceData))
-            return 1;
+        RectTransform position = GetComponent<RectTransform>();
 
-        return 0;
+        if (pieceScript != null && IsPieceValid(pieceScript.pieceData))
+        {
+            if (!pathPosition.Contains(position))
+                pathPosition.Add(position);
+        }
+        else
+            pathPosition.Remove(position);
     }
 
     public void SetPiece(GameObject piece)
     {
         currentPiece = piece;
+        UpdatePath();
     }
 }
