@@ -11,7 +11,7 @@ public class HoverCell : MonoBehaviour
         if (borderImage != null)
         {
             borderImage.enabled = true;
-            borderImage.color = Color.red; // Al empezar, se pone por defecto la celda de color base (rojo).
+            //borderImage.color = Color.red; // Al empezar, se pone por defecto la celda de color base (rojo).
             // TODO: cambiar al sprite base.
         }
     }
@@ -23,6 +23,6 @@ public class HoverCell : MonoBehaviour
         if (state)
             borderImage.color = Color.green; // TODO: cambiar al sprite con recuadro verde.
         else
-            borderImage.color = Color.red;
+            borderImage.color = Color.yellow;
     }
 }
