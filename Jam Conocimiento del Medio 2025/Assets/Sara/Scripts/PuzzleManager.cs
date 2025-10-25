@@ -19,14 +19,16 @@ public class PuzzleManager : MonoBehaviour
         oneStar.SetActive(false);
         twoStar.SetActive(false);
         threeStar.SetActive(false);
+
+        PieceCounterManager counterManager = FindObjectOfType<PieceCounterManager>();
+        counterManager.InitializeCounters();
     }
 
     public void CheckPuzzle()
     {
         SFXManager.Instance.PlaySFX("ButtonPress");
-        Debug.Log("Has pulsado el botón de Comprobar");
-
         CorrectPieces[] allCells = cellsParent.GetComponentsInChildren<CorrectPieces>();
+
         foreach (CorrectPieces cell in allCells)
             cell.puzzleManager = this;
 
@@ -38,6 +40,7 @@ public class PuzzleManager : MonoBehaviour
                 continue;
 
             bool match = true;
+
             for (int i = 0; i < path.pathPositions.Count; i++)
             {
                 if (CorrectPieces.pathPosition[i] != path.pathPositions[i])
@@ -56,7 +59,6 @@ public class PuzzleManager : MonoBehaviour
 
         if (matchedPath == null || hamsterControl.isMoving)
         {
-            Debug.Log("El camino es inválido o el hamster se está moviendo.");
             ResetPuzzle(allCells);
             return;
         }
@@ -65,9 +67,8 @@ public class PuzzleManager : MonoBehaviour
         int minPiezas = possiblePaths.Min(p => p.pathPositions.Count);
         int maxPiezas = possiblePaths.Max(p => p.pathPositions.Count);
 
-        Debug.Log($"Ruta completada con {piezasUsadas} piezas. (min: {minPiezas}, max: {maxPiezas})");
-
         int estrellas;
+
         if (piezasUsadas >= maxPiezas)
             estrellas = 3;
         else if (piezasUsadas <= minPiezas)
@@ -95,15 +96,9 @@ public class PuzzleManager : MonoBehaviour
         PieceCounterManager counterManager = FindObjectOfType<PieceCounterManager>();
 
         foreach (MovePieces piece in allPieces)
-        {
             piece.ReturnToStart();
 
-            TypePiece pieceScript = piece.GetComponent<TypePiece>();
-            if (pieceScript != null)
-            {
-                counterManager?.AddPiece(pieceScript.pieceData.pieceType);
-            }
-        }
+        counterManager.ResetToInitialCounts();
 
         foreach (CorrectPieces cell in allCells)
             cell.SetPiece(null);
@@ -135,7 +130,6 @@ public class PuzzleManager : MonoBehaviour
         SFXManager.Instance.PlaySFX("HamsterWin", false);
     }
 
-    #region Métodos Interfaz
     public void BackMenu()
     {
         SceneManager.LoadScene("00_Main");
@@ -146,5 +140,4 @@ public class PuzzleManager : MonoBehaviour
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex + 1);
     }
-    #endregion
 }

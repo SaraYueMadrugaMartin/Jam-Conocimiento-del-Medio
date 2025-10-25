@@ -4,29 +4,29 @@ using UnityEngine.EventSystems;
 
 public class MovePieces : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
-    #region Variables
+    #region Variables 
     private Canvas canvas;
     private CanvasGroup canvasGroup;
-    private RectTransform piecesPos; // Posición de la pieza movible.
 
-    private Vector2 posInicial; // Posición inicial de la pieza que se mueve.
+    private RectTransform piecesPos;
+    private Vector2 posInicial;
     [SerializeField] private float pieceThreshold = 150f;
-    private List<RectTransform> cellPos; // Lista con las posiciones de todas las celdas posibles para poner las piezas.
-
+    private List<RectTransform> cellPos;
     private HoverCell nearestCell = null;
     private HoverCell lastHighlightedCell;
     [SerializeField] private float hoverThreshold = 150f;
+    private CorrectPieces currentCell = null;
+    private bool isPlaced = false;
     #endregion
 
-    #region Basic Functions
+    #region Basic Functions 
     void Awake()
     {
         piecesPos = GetComponent<RectTransform>();
         canvas = GetComponentInParent<Canvas>();
         canvasGroup = GetComponent<CanvasGroup>();
         cellPos = new List<RectTransform>();
-
-        posInicial = piecesPos.anchoredPosition; // Guarda la posición inicial de la pieza.
+        posInicial = piecesPos.anchoredPosition;
 
         if (canvasGroup == null)
             canvasGroup = gameObject.AddComponent<CanvasGroup>();
@@ -36,11 +36,19 @@ public class MovePieces : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDr
     }
     #endregion
 
-    #region Métodos Move Piece
+    #region Métodos Move Piece 
     public void OnBeginDrag(PointerEventData eventData)
     {
         canvasGroup.alpha = 0.8f;
         canvasGroup.blocksRaycasts = false;
+
+        if (currentCell != null && currentCell.currentPiece == this.gameObject)
+        {
+            currentCell.SetPiece(null);
+            currentCell = null;
+        }
+
+        piecesPos.SetAsLastSibling();
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -69,7 +77,9 @@ public class MovePieces : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDr
                 lastHighlightedCell.SetHighlight(false);
 
             if (nearestCell != null)
-                nearestCell.SetHighlight(true);
+                Check.Instance.Show(nearestCell.GetComponent<RectTransform>());
+            else
+                Check.Instance.Hide();
 
             lastHighlightedCell = nearestCell;
         }
@@ -82,17 +92,16 @@ public class MovePieces : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDr
 
         TypePiece pieceScript = GetComponent<TypePiece>();
         PieceCounterManager counterManager = FindObjectOfType<PieceCounterManager>();
-
         RectTransform nearestPosCell = null;
         float minDistance = Mathf.Infinity;
 
         foreach (RectTransform cell in cellPos)
         {
-            float distancePieceToCell = Vector2.Distance(piecesPos.anchoredPosition, cell.anchoredPosition);
+            float distance = Vector2.Distance(piecesPos.anchoredPosition, cell.anchoredPosition);
 
-            if (distancePieceToCell < minDistance)
+            if (distance < minDistance)
             {
-                minDistance = distancePieceToCell;
+                minDistance = distance;
                 nearestPosCell = cell;
             }
         }
@@ -104,13 +113,25 @@ public class MovePieces : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDr
         {
             piecesPos.anchoredPosition = nearestPosCell.anchoredPosition;
             cellScript.SetPiece(this.gameObject);
-            counterManager?.RemovePiece(pieceScript.pieceData.pieceType);
+
+            if (!isPlaced)
+            {
+                counterManager?.RemovePiece(pieceScript.pieceData.pieceType);
+                isPlaced = true;
+            }
+
+            currentCell = cellScript;
             SFXManager.Instance.PlaySFX("PlacedTile");
         }
         else
         {
             piecesPos.anchoredPosition = posInicial;
-            counterManager?.AddPiece(pieceScript.pieceData.pieceType);
+
+            if (isPlaced)
+            {
+                counterManager?.AddPiece(pieceScript.pieceData.pieceType);
+                isPlaced = false;
+            }
         }
 
         if (lastHighlightedCell != null)
@@ -120,6 +141,7 @@ public class MovePieces : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDr
         }
 
         nearestCell = null;
+        Check.Instance.Hide();
     }
 
     public void ReturnToStart()
@@ -128,7 +150,18 @@ public class MovePieces : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDr
         PieceCounterManager counterManager = FindObjectOfType<PieceCounterManager>();
 
         piecesPos.anchoredPosition = posInicial;
-        counterManager?.AddPiece(pieceScript.pieceData.pieceType);
+
+        if (currentCell != null)
+        {
+            currentCell.SetPiece(null);
+            currentCell = null;
+        }
+
+        if (isPlaced)
+        {
+            counterManager?.AddPiece(pieceScript.pieceData.pieceType);
+            isPlaced = false;
+        }
     }
     #endregion
 }
