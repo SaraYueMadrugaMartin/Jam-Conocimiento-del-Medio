@@ -30,6 +30,7 @@ public class HamsterController : MonoBehaviour
     {
         isMoving = true;
         animCharacter.SetBool("Walking", true);
+        SFXManager.Instance.PlaySFX("HamsterWalk", true);
 
         foreach (RectTransform point in path) // Recorre cada pieza del camino.
         {
@@ -57,6 +58,7 @@ public class HamsterController : MonoBehaviour
         }
 
         animCharacter.SetBool("Walking", false);
+        SFXManager.Instance.StopSFX("HamsterWalk");
         isMoving = false;
         CorrectPieces.pathPosition.Clear();
         onComplete?.Invoke();

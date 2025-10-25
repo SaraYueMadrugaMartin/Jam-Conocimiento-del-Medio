@@ -23,6 +23,7 @@ public class PuzzleManager : MonoBehaviour
 
     public void CheckPuzzle()
     {
+        SFXManager.Instance.PlaySFX("ButtonPress");
         Debug.Log("Has pulsado el botón de Comprobar");
 
         CorrectPieces[] allCells = cellsParent.GetComponentsInChildren<CorrectPieces>();
@@ -68,11 +69,11 @@ public class PuzzleManager : MonoBehaviour
 
         int estrellas;
         if (piezasUsadas >= maxPiezas)
-            estrellas = 3; // Camino más largo
+            estrellas = 3;
         else if (piezasUsadas <= minPiezas)
-            estrellas = 1; // Camino más corto
+            estrellas = 1;
         else
-            estrellas = 2; // Intermedio
+            estrellas = 2;
 
         switch (estrellas)
         {
@@ -91,9 +92,18 @@ public class PuzzleManager : MonoBehaviour
     private void ResetPuzzle(CorrectPieces[] allCells)
     {
         MovePieces[] allPieces = FindObjectsOfType<MovePieces>();
+        PieceCounterManager counterManager = FindObjectOfType<PieceCounterManager>();
 
         foreach (MovePieces piece in allPieces)
+        {
             piece.ReturnToStart();
+
+            TypePiece pieceScript = piece.GetComponent<TypePiece>();
+            if (pieceScript != null)
+            {
+                counterManager?.AddPiece(pieceScript.pieceData.pieceType);
+            }
+        }
 
         foreach (CorrectPieces cell in allCells)
             cell.SetPiece(null);
@@ -105,6 +115,7 @@ public class PuzzleManager : MonoBehaviour
     {
         panelWin.SetActive(true);
         oneStar.SetActive(true);
+        SFXManager.Instance.PlaySFX("HamsterWin", false);
     }
 
     public void FinTwoStar()
@@ -112,6 +123,7 @@ public class PuzzleManager : MonoBehaviour
         panelWin.SetActive(true);
         oneStar.SetActive(true);
         twoStar.SetActive(true);
+        SFXManager.Instance.PlaySFX("HamsterWin", false);
     }
 
     public void FinThreeStar()
@@ -120,6 +132,7 @@ public class PuzzleManager : MonoBehaviour
         oneStar.SetActive(true);
         twoStar.SetActive(true);
         threeStar.SetActive(true);
+        SFXManager.Instance.PlaySFX("HamsterWin", false);
     }
 
     #region Métodos Interfaz
