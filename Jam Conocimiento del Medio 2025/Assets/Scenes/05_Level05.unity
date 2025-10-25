@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!224 &46695081 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 604515120933758672, guid: 4503263e82c697c49847d29c2162da79, type: 3}
+  m_PrefabInstance: {fileID: 1565290463683320192}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &52165913 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7556636698158127768, guid: 4503263e82c697c49847d29c2162da79, type: 3}
@@ -4119,6 +4124,7 @@ MonoBehaviour:
     - {fileID: 1565290463683320197}
     - {fileID: 1565290463683320193}
     - {fileID: 1265480034}
+  endPoint: {fileID: 46695081}
 --- !u!4 &1459719763
 Transform:
   m_ObjectHideFlags: 0
@@ -4546,8 +4552,8 @@ RectTransform:
   - {fileID: 634916777}
   - {fileID: 272978630}
   - {fileID: 990338016}
-  - {fileID: 979665115}
   - {fileID: 450455141}
+  - {fileID: 979665115}
   - {fileID: 210812448}
   - {fileID: 1475310733}
   m_Father: {fileID: 0}

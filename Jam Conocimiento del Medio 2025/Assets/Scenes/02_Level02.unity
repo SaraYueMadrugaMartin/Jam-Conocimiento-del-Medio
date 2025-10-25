@@ -3348,6 +3348,7 @@ MonoBehaviour:
     - {fileID: 1565290463683320195}
     - {fileID: 1565290463683320194}
     - {fileID: 1565290463683320193}
+  endPoint: {fileID: 1565290463683320196}
 --- !u!4 &1459719763
 Transform:
   m_ObjectHideFlags: 0
@@ -3974,8 +3975,8 @@ RectTransform:
   - {fileID: 634916777}
   - {fileID: 272978630}
   - {fileID: 990338016}
-  - {fileID: 979665115}
   - {fileID: 450455141}
+  - {fileID: 979665115}
   - {fileID: 210812448}
   - {fileID: 1475310733}
   m_Father: {fileID: 0}
@@ -5699,6 +5700,11 @@ RectTransform:
 --- !u!224 &1565290463683320195 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4892680485358223765, guid: 4503263e82c697c49847d29c2162da79, type: 3}
+  m_PrefabInstance: {fileID: 1565290463683320192}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &1565290463683320196 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 604515120933758672, guid: 4503263e82c697c49847d29c2162da79, type: 3}
   m_PrefabInstance: {fileID: 1565290463683320192}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3152697568197950220

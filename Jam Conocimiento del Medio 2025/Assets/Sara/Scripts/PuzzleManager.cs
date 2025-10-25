@@ -12,6 +12,7 @@ public class PuzzleManager : MonoBehaviour
     [SerializeField] private GameObject threeStar;
     [SerializeField] private GameObject cellsParent;
     [SerializeField] private List<PossiblePaths> possiblePaths;
+    [SerializeField] private RectTransform endPoint;
 
     private void Start()
     {
@@ -36,19 +37,11 @@ public class PuzzleManager : MonoBehaviour
 
         foreach (PossiblePaths path in possiblePaths)
         {
-            if (CorrectPieces.pathPosition.Count != path.pathPositions.Count)
-                continue;
-
-            bool match = true;
-
-            for (int i = 0; i < path.pathPositions.Count; i++)
+            bool match = path.pathPositions.All(pos =>
             {
-                if (CorrectPieces.pathPosition[i] != path.pathPositions[i])
-                {
-                    match = false;
-                    break;
-                }
-            }
+                CorrectPieces cellComp = pos.GetComponent<CorrectPieces>();
+                return cellComp != null && cellComp.currentPiece != null && cellComp.IsPieceValid(cellComp.currentPiece.GetComponent<TypePiece>().pieceData);
+            });
 
             if (match)
             {
@@ -68,7 +61,6 @@ public class PuzzleManager : MonoBehaviour
         int maxPiezas = possiblePaths.Max(p => p.pathPositions.Count);
 
         int estrellas;
-
         if (piezasUsadas >= maxPiezas)
             estrellas = 3;
         else if (piezasUsadas <= minPiezas)
@@ -76,16 +68,21 @@ public class PuzzleManager : MonoBehaviour
         else
             estrellas = 2;
 
+        List<RectTransform> pathToFollow = new List<RectTransform>(matchedPath.pathPositions);
+
+        if (endPoint != null)
+            pathToFollow.Add(endPoint);
+
         switch (estrellas)
         {
             case 1:
-                hamsterControl.StartPath(new List<RectTransform>(CorrectPieces.pathPosition), () => { FinOneStar(); });
+                hamsterControl.StartPath(pathToFollow, () => { FinOneStar(); });
                 break;
             case 2:
-                hamsterControl.StartPath(new List<RectTransform>(CorrectPieces.pathPosition), () => { FinTwoStar(); });
+                hamsterControl.StartPath(pathToFollow, () => { FinTwoStar(); });
                 break;
             case 3:
-                hamsterControl.StartPath(new List<RectTransform>(CorrectPieces.pathPosition), () => { FinThreeStar(); });
+                hamsterControl.StartPath(pathToFollow, () => { FinThreeStar(); });
                 break;
         }
     }
