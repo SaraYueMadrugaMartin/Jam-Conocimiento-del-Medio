@@ -1,30 +1,38 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Linq;
 
 public class PuzzleManager : MonoBehaviour
 {
     [SerializeField] private HamsterController hamsterControl;
     [SerializeField] private GameObject panelWin;
-    [SerializeField] private GameObject panelMedio;
+    [SerializeField] private GameObject oneStar;
+    [SerializeField] private GameObject twoStar;
+    [SerializeField] private GameObject threeStar;
     [SerializeField] private GameObject cellsParent;
     [SerializeField] private List<PossiblePaths> possiblePaths;
 
     private void Start()
     {
         panelWin.SetActive(false);
-        panelMedio.SetActive(false);
+        oneStar.SetActive(false);
+        twoStar.SetActive(false);
+        threeStar.SetActive(false);
+
+        PieceCounterManager counterManager = FindObjectOfType<PieceCounterManager>();
+        counterManager.InitializeCounters();
     }
 
     public void CheckPuzzle()
     {
-        Debug.Log("Has pulsado el botón de Comprobar");
-
+        SFXManager.Instance.PlaySFX("ButtonPress");
         CorrectPieces[] allCells = cellsParent.GetComponentsInChildren<CorrectPieces>();
-        bool rutaCompleta = false;
 
         foreach (CorrectPieces cell in allCells)
             cell.puzzleManager = this;
+
+        PossiblePaths matchedPath = null;
 
         foreach (PossiblePaths path in possiblePaths)
         {
@@ -44,31 +52,53 @@ public class PuzzleManager : MonoBehaviour
 
             if (match)
             {
-                rutaCompleta = true;
+                matchedPath = path;
                 break;
             }
         }
 
-        if (rutaCompleta && !hamsterControl.isMoving)
+        if (matchedPath == null || hamsterControl.isMoving)
         {
-            if(CorrectPieces.pathPosition.Count <= 10) // TODO: Hay que cambiar el sprite en este momento a hamster más delgado.
-                hamsterControl.StartPath(new List<RectTransform>(CorrectPieces.pathPosition), () => { panelMedio.SetActive(true); }); // TODO: Aquí iría la animación del hamster explotando.
-            else if(CorrectPieces.pathPosition.Count >= 11)
-                hamsterControl.StartPath(new List<RectTransform>(CorrectPieces.pathPosition), () => { panelWin.SetActive(true); }); // TODO: Llamar a función de FinishAnimation.
-        }
-        else
-        {
-            Debug.Log("El camino es inválido.");
             ResetPuzzle(allCells);
+            return;
+        }
+
+        int piezasUsadas = matchedPath.pathPositions.Count;
+        int minPiezas = possiblePaths.Min(p => p.pathPositions.Count);
+        int maxPiezas = possiblePaths.Max(p => p.pathPositions.Count);
+
+        int estrellas;
+
+        if (piezasUsadas >= maxPiezas)
+            estrellas = 3;
+        else if (piezasUsadas <= minPiezas)
+            estrellas = 1;
+        else
+            estrellas = 2;
+
+        switch (estrellas)
+        {
+            case 1:
+                hamsterControl.StartPath(new List<RectTransform>(CorrectPieces.pathPosition), () => { FinOneStar(); });
+                break;
+            case 2:
+                hamsterControl.StartPath(new List<RectTransform>(CorrectPieces.pathPosition), () => { FinTwoStar(); });
+                break;
+            case 3:
+                hamsterControl.StartPath(new List<RectTransform>(CorrectPieces.pathPosition), () => { FinThreeStar(); });
+                break;
         }
     }
 
     private void ResetPuzzle(CorrectPieces[] allCells)
     {
         MovePieces[] allPieces = FindObjectsOfType<MovePieces>();
+        PieceCounterManager counterManager = FindObjectOfType<PieceCounterManager>();
 
         foreach (MovePieces piece in allPieces)
             piece.ReturnToStart();
+
+        counterManager.ResetToInitialCounts();
 
         foreach (CorrectPieces cell in allCells)
             cell.SetPiece(null);
@@ -76,12 +106,30 @@ public class PuzzleManager : MonoBehaviour
         CorrectPieces.pathPosition.Clear();
     }
 
-    public void FinishAnimation()
+    public void FinOneStar()
     {
-        // TODO: Añadir la animación del hamster comiendo las pipas y llenándose.
+        panelWin.SetActive(true);
+        oneStar.SetActive(true);
+        SFXManager.Instance.PlaySFX("HamsterWin", false);
     }
 
-    #region Métodos Interfaz
+    public void FinTwoStar()
+    {
+        panelWin.SetActive(true);
+        oneStar.SetActive(true);
+        twoStar.SetActive(true);
+        SFXManager.Instance.PlaySFX("HamsterWin", false);
+    }
+
+    public void FinThreeStar()
+    {
+        panelWin.SetActive(true);
+        oneStar.SetActive(true);
+        twoStar.SetActive(true);
+        threeStar.SetActive(true);
+        SFXManager.Instance.PlaySFX("HamsterWin", false);
+    }
+
     public void BackMenu()
     {
         SceneManager.LoadScene("00_Main");
@@ -89,7 +137,7 @@ public class PuzzleManager : MonoBehaviour
 
     public void NextLevel()
     {
-        SceneManager.LoadScene("02_Level02");
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex + 1);
     }
-    #endregion
 }

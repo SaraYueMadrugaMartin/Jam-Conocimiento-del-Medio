@@ -1,0 +1,1007 @@
+fileFormatVersion: 2
+guid: 4ec27d63bdbfae741aec2d18cf54423c
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SpriteSheet_Hamster_0
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 2294
+        width: 235
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85ea37d6c1774dd4b95621aade9e8957
+      internalID: -981514450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Hamster_1
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 2285
+        width: 233
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb9ae3c8bbc97d941ae14bdbddd3894a
+      internalID: -1127675841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Hamster_2
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 2292
+        width: 235
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d4c6d7e21ad24f4bbb04af5a8232a77
+      internalID: 606612879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Hamster_3
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 2285
+        width: 235
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a23482d7baae894fa75648053d87496
+      internalID: 777214758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Hamster_4
+      rect:
+        serializedVersion: 2
+        x: 1504
+        y: 2294
+        width: 236
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90d120ba35208f245967c41d1d14484c
+      internalID: 1759718894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Hamster_5
+      rect:
+        serializedVersion: 2
+        x: 1865
+        y: 2294
+        width: 206
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b99d23f4a6447f4e8b73b0988f3bb33
+      internalID: 1303309514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Hamster_6
+      rect:
+        serializedVersion: 2
+        x: 2265
+        y: 2265
+        width: 133
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10209a91f1b8a264ca8acf16275e9abc
+      internalID: 1277681788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Hamster_7
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 1895
+        width: 236
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a7ae83122ade574a9c548b33bfefe1e
+      internalID: 1809429664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Hamster_8
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 1888
+        width: 234
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03651be67dc7b5e4a81e78ad5a9d3780
+      internalID: -1417546856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Hamster_9
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 1894
+        width: 235
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57298614fb9edeb4db90895e165da3fa
+      internalID: 103189422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Hamster_10
+      rect:
+        serializedVersion: 2
+        x: 1133
+        y: 1888
+        width: 235
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01f007d0fe00b4247af8373d6b8adddf
+      internalID: 1978976946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Hamster_11
+      rect:
+        serializedVersion: 2
+        x: 1505
+        y: 1896
+        width: 236
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 130e5bbc69d53e542a08fe97ed83d379
+      internalID: -498202953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Hamster_12
+      rect:
+        serializedVersion: 2
+        x: 1857
+        y: 1826
+        width: 205
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 562e547340a772546994eaa9bdf4268d
+      internalID: -1154151088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Hamster_13
+      rect:
+        serializedVersion: 2
+        x: 2265
+        y: 1824
+        width: 133
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e6d8e8f75b2d6f4b8e6663e282b16aa
+      internalID: -1559576492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Hamster_14
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 1512
+        width: 132
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 674e7dfffc52c2145bdd84a92af0296e
+      internalID: -2036266742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Hamster_15
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 1515
+        width: 146
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bc8cff4990d6a244ac716956b9a3b33
+      internalID: -1119315455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Hamster_16
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 1512
+        width: 133
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b64a77f875f8a624b8d60f790acac60f
+      internalID: 676850071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Hamster_17
+      rect:
+        serializedVersion: 2
+        x: 1207
+        y: 1512
+        width: 145
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ba179d5065e1f349bd685a3a73f35c3
+      internalID: 1118086959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Hamster_18
+      rect:
+        serializedVersion: 2
+        x: 1552
+        y: 1513
+        width: 131
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8f9b008100d1c446a6a7ecf2b61e0c8
+      internalID: -1115049502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Hamster_19
+      rect:
+        serializedVersion: 2
+        x: 1886
+        y: 1526
+        width: 197
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a1e5a428109c1d41a8044d0a189fc4b
+      internalID: 171529667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Hamster_20
+      rect:
+        serializedVersion: 2
+        x: 2219
+        y: 1547
+        width: 236
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb44f38cc344a534086a09ebce57e4a1
+      internalID: 775462086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Hamster_21
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 1131
+        width: 131
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 239dc7e48d9b4834dbb2aa0e69ef9c8a
+      internalID: 562435517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Hamster_22
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 1130
+        width: 145
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c98e1acc2b209547a7d078d51a524c9
+      internalID: -1310117629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Hamster_23
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 1130
+        width: 132
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4279ac1ed2a80a46a8b4e2663175ec7
+      internalID: -395922011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Hamster_24
+      rect:
+        serializedVersion: 2
+        x: 1169
+        y: 1131
+        width: 146
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54d815f9593d0754e8f6203c12ac1112
+      internalID: 1125415075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Hamster_25
+      rect:
+        serializedVersion: 2
+        x: 1552
+        y: 1139
+        width: 133
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3dea9d00538ba343bdc19c41a93cfbd
+      internalID: 730787567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Hamster_26
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 1158
+        width: 197
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 700467692a0077e4595822e4108a3272
+      internalID: -1120646543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Hamster_27
+      rect:
+        serializedVersion: 2
+        x: 2198
+        y: 1158
+        width: 236
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bb67cc379e02214fb6ffa8928ce8060
+      internalID: 628114363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Hamster_28
+      rect:
+        serializedVersion: 2
+        x: 1510
+        y: 826
+        width: 236
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d35f8ac079f5cbf428a27470dd820e1f
+      internalID: -227771527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Hamster_29
+      rect:
+        serializedVersion: 2
+        x: 1869
+        y: 754
+        width: 206
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1334f586cdfd8849a290001b2753727
+      internalID: 254322519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Hamster_30
+      rect:
+        serializedVersion: 2
+        x: 2276
+        y: 735
+        width: 133
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a70607098fae8c449d8cac79cd4aeeb
+      internalID: -684665148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Hamster_31
+      rect:
+        serializedVersion: 2
+        x: 1511
+        y: 457
+        width: 236
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2557ceb20e01c94b919f1343009d0fd
+      internalID: 1826118057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Hamster_32
+      rect:
+        serializedVersion: 2
+        x: 1872
+        y: 461
+        width: 205
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ec229b232c1d2b48ae578e7cb92166a
+      internalID: 130301168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Hamster_33
+      rect:
+        serializedVersion: 2
+        x: 2280
+        y: 420
+        width: 133
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 640d225f3a3ed1148a571b831e746a3c
+      internalID: 1755584652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Hamster_34
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 59
+        width: 133
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebb6e2a1b6e9d594abc18d4a4619e3ee
+      internalID: -2132966957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Hamster_35
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 101
+        width: 197
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bf2402245219e146a284495d51d7928
+      internalID: 1048302444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Hamster_36
+      rect:
+        serializedVersion: 2
+        x: 1142
+        y: 123
+        width: 236
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3203d2573a83cc74986822cb53621b54
+      internalID: 1853702092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Hamster_37
+      rect:
+        serializedVersion: 2
+        x: 1550
+        y: 59
+        width: 133
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f6a9041547a0764588890d6b2000255
+      internalID: 1023522457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Hamster_38
+      rect:
+        serializedVersion: 2
+        x: 1856
+        y: 102
+        width: 196
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b115042a04e4a449bcd4b4a8ce19950
+      internalID: -1194991765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Hamster_39
+      rect:
+        serializedVersion: 2
+        x: 2225
+        y: 121
+        width: 236
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb6caa07835a49b48adc18d7a62a0483
+      internalID: -1053479811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      SpriteSheet_Hamster_0: -981514450
+      SpriteSheet_Hamster_1: -1127675841
+      SpriteSheet_Hamster_10: 1978976946
+      SpriteSheet_Hamster_11: -498202953
+      SpriteSheet_Hamster_12: -1154151088
+      SpriteSheet_Hamster_13: -1559576492
+      SpriteSheet_Hamster_14: -2036266742
+      SpriteSheet_Hamster_15: -1119315455
+      SpriteSheet_Hamster_16: 676850071
+      SpriteSheet_Hamster_17: 1118086959
+      SpriteSheet_Hamster_18: -1115049502
+      SpriteSheet_Hamster_19: 171529667
+      SpriteSheet_Hamster_2: 606612879
+      SpriteSheet_Hamster_20: 775462086
+      SpriteSheet_Hamster_21: 562435517
+      SpriteSheet_Hamster_22: -1310117629
+      SpriteSheet_Hamster_23: -395922011
+      SpriteSheet_Hamster_24: 1125415075
+      SpriteSheet_Hamster_25: 730787567
+      SpriteSheet_Hamster_26: -1120646543
+      SpriteSheet_Hamster_27: 628114363
+      SpriteSheet_Hamster_28: -227771527
+      SpriteSheet_Hamster_29: 254322519
+      SpriteSheet_Hamster_3: 777214758
+      SpriteSheet_Hamster_30: -684665148
+      SpriteSheet_Hamster_31: 1826118057
+      SpriteSheet_Hamster_32: 130301168
+      SpriteSheet_Hamster_33: 1755584652
+      SpriteSheet_Hamster_34: -2132966957
+      SpriteSheet_Hamster_35: 1048302444
+      SpriteSheet_Hamster_36: 1853702092
+      SpriteSheet_Hamster_37: 1023522457
+      SpriteSheet_Hamster_38: -1194991765
+      SpriteSheet_Hamster_39: -1053479811
+      SpriteSheet_Hamster_4: 1759718894
+      SpriteSheet_Hamster_5: 1303309514
+      SpriteSheet_Hamster_6: 1277681788
+      SpriteSheet_Hamster_7: 1809429664
+      SpriteSheet_Hamster_8: -1417546856
+      SpriteSheet_Hamster_9: 103189422
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

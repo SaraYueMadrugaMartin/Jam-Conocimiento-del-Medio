@@ -1,31 +1,56 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class SFXManager : MonoBehaviour
 {
-    public static SFXManager _instance;
+    public static SFXManager Instance;
 
-    [SerializeField] private List<AudioSource> soundsList;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private List<AudioClip> audioClips;
 
     private void Awake()
     {
-        if(_instance == null)
-            _instance = this;
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
         else
+        {
             Destroy(gameObject);
+        }
 
-        DontDestroyOnLoad(this);
+        if (audioSource == null)
+            audioSource = gameObject.AddComponent<AudioSource>();
     }
 
-    private void Start()
+    public void PlaySFX(string clipName, bool loop = false)
     {
-        soundsList = new List<AudioSource>();
+        AudioClip clip = audioClips.Find(c => c != null && c.name == clipName);
+        if (clip != null)
+        {
+            if (loop)
+            {
+                audioSource.clip = clip;
+                audioSource.loop = true;
+                audioSource.Play();
+            }
+            else
+            {
+                audioSource.PlayOneShot(clip);
+            }
+        }
+        else
+        {
+            Debug.LogWarning("SFX no encontrado: " + clipName);
+        }
     }
 
-    public void PlaySFX()
+    public void StopSFX(string clipName)
     {
-        for(int i = 0; i < soundsList.Count; i++)
-            soundsList[i].Play();
+        if (audioSource.clip != null && audioSource.clip.name == clipName && audioSource.isPlaying)
+        {
+            audioSource.Stop();
+        }
     }
 }

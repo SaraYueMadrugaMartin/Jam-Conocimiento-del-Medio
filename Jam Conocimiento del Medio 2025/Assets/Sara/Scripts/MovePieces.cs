@@ -4,49 +4,56 @@ using UnityEngine.EventSystems;
 
 public class MovePieces : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
-    #region Variables
+    #region Variables 
     private Canvas canvas;
     private CanvasGroup canvasGroup;
-    private RectTransform piecesPos; // Posición de la pieza movible.
 
-    private Vector2 posInicial; // Posicion inicial de la pieza que se mueve.
+    private RectTransform piecesPos;
+    private Vector2 posInicial;
     [SerializeField] private float pieceThreshold = 150f;
-    private List<RectTransform> cellPos; // Lista con las posiciones de todas las celdas posibles para poner las piezas.
-
+    private List<RectTransform> cellPos;
     private HoverCell nearestCell = null;
     private HoverCell lastHighlightedCell;
     [SerializeField] private float hoverThreshold = 150f;
+    private CorrectPieces currentCell = null;
+    private bool isPlaced = false;
     #endregion
 
-    #region Basic Functions
+    #region Basic Functions 
     void Awake()
     {
         piecesPos = GetComponent<RectTransform>();
         canvas = GetComponentInParent<Canvas>();
         canvasGroup = GetComponent<CanvasGroup>();
         cellPos = new List<RectTransform>();
-
-        posInicial = piecesPos.anchoredPosition; // Guarda la posición inicial de la pieza.
+        posInicial = piecesPos.anchoredPosition;
 
         if (canvasGroup == null)
             canvasGroup = gameObject.AddComponent<CanvasGroup>();
 
-        foreach (Transform childCell in GameObject.Find("Celdas").transform) // Buscamos el objeto "Celdas" para añadir sus hijos en la lista de posiciones de celdas.
+        foreach (Transform childCell in GameObject.Find("Celdas").transform)
             cellPos.Add(childCell.GetComponent<RectTransform>());
     }
     #endregion
 
-    #region Métodos Move Piece
+    #region Métodos Move Piece 
     public void OnBeginDrag(PointerEventData eventData)
-    {        
+    {
         canvasGroup.alpha = 0.8f;
         canvasGroup.blocksRaycasts = false;
+
+        if (currentCell != null && currentCell.currentPiece == this.gameObject)
+        {
+            currentCell.SetPiece(null);
+            currentCell = null;
+        }
+
+        piecesPos.SetAsLastSibling();
     }
 
     public void OnDrag(PointerEventData eventData)
     {
         piecesPos.anchoredPosition += eventData.delta / canvas.scaleFactor;
-        //Debug.Log("Estás moviendo la pieza.");
 
         HoverCell closestCell = null;
         float minDistance = Mathf.Infinity;
@@ -62,10 +69,7 @@ public class MovePieces : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDr
             }
         }
 
-        if (minDistance < hoverThreshold)
-            nearestCell = closestCell;
-        else
-            nearestCell = null;
+        nearestCell = (minDistance < hoverThreshold) ? closestCell : null;
 
         if (nearestCell != lastHighlightedCell)
         {
@@ -73,7 +77,9 @@ public class MovePieces : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDr
                 lastHighlightedCell.SetHighlight(false);
 
             if (nearestCell != null)
-                nearestCell.SetHighlight(true);
+                Check.Instance.Show(nearestCell.GetComponent<RectTransform>());
+            else
+                Check.Instance.Hide();
 
             lastHighlightedCell = nearestCell;
         }
@@ -84,29 +90,48 @@ public class MovePieces : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDr
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
 
+        TypePiece pieceScript = GetComponent<TypePiece>();
+        PieceCounterManager counterManager = FindObjectOfType<PieceCounterManager>();
         RectTransform nearestPosCell = null;
         float minDistance = Mathf.Infinity;
 
-        foreach (RectTransform cell in cellPos) // Se recorren todas las celdas posibles donde se pueden poner las piezas.
+        foreach (RectTransform cell in cellPos)
         {
-            float distancePieceToCell = Vector2.Distance(piecesPos.anchoredPosition, cell.anchoredPosition); // Calculamos la distancia real a la que está la pieza de la celda.
+            float distance = Vector2.Distance(piecesPos.anchoredPosition, cell.anchoredPosition);
 
-            if (distancePieceToCell < minDistance) // Si la distancia a la celda es más pequeña que la anterior más cercana registrada, se asigna.
+            if (distance < minDistance)
             {
-                minDistance = distancePieceToCell;
+                minDistance = distance;
                 nearestPosCell = cell;
             }
         }
 
-        if (nearestPosCell != null && minDistance < pieceThreshold) // Si hay una celda disponible y a menor distancia del umbral marcado, la pieza se pone en la posición de dicha celda.
+        CorrectPieces cellScript = nearestPosCell?.GetComponent<CorrectPieces>();
+        bool canPlace = cellScript != null && cellScript.currentPiece == null && minDistance < pieceThreshold;
+
+        if (canPlace)
         {
             piecesPos.anchoredPosition = nearestPosCell.anchoredPosition;
-            //Debug.Log("La pieza está bien colocada.");
+            cellScript.SetPiece(this.gameObject);
+
+            if (!isPlaced)
+            {
+                counterManager?.RemovePiece(pieceScript.pieceData.pieceType);
+                isPlaced = true;
+            }
+
+            currentCell = cellScript;
+            SFXManager.Instance.PlaySFX("PlacedTile");
         }
         else
         {
             piecesPos.anchoredPosition = posInicial;
-            //Debug.Log("La pieza está mal colocada.");
+
+            if (isPlaced)
+            {
+                counterManager?.AddPiece(pieceScript.pieceData.pieceType);
+                isPlaced = false;
+            }
         }
 
         if (lastHighlightedCell != null)
@@ -116,25 +141,27 @@ public class MovePieces : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDr
         }
 
         nearestCell = null;
-
-        CorrectPieces cellScript = nearestPosCell.GetComponent<CorrectPieces>();
-        TypePiece pieceScript = this.GetComponent<TypePiece>();
-
-        if (cellScript != null && pieceScript != null)
-        {
-            if (cellScript.IsPieceValid(pieceScript.pieceData))
-            {
-                piecesPos.anchoredPosition = nearestPosCell.anchoredPosition;
-                cellScript.SetPiece(this.gameObject);
-            }
-            else
-                cellScript.SetPiece(null);
-        }
+        Check.Instance.Hide();
     }
 
     public void ReturnToStart()
     {
+        TypePiece pieceScript = GetComponent<TypePiece>();
+        PieceCounterManager counterManager = FindObjectOfType<PieceCounterManager>();
+
         piecesPos.anchoredPosition = posInicial;
+
+        if (currentCell != null)
+        {
+            currentCell.SetPiece(null);
+            currentCell = null;
+        }
+
+        if (isPlaced)
+        {
+            counterManager?.AddPiece(pieceScript.pieceData.pieceType);
+            isPlaced = false;
+        }
     }
     #endregion
 }
