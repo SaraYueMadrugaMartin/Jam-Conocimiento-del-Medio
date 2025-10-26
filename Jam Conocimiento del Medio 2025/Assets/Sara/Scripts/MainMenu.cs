@@ -22,6 +22,11 @@ public class MainMenu : MonoBehaviour
         panelCredits.SetActive(true);
     }
 
+    public void BackHome()
+    {
+        SceneManager.LoadScene("00_Main");
+    }
+
     public void ClosePanelCredits()
     {
         panelCredits.SetActive(false);
