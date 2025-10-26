@@ -4389,6 +4389,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FinPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 8258121364026271549, guid: eeb017b794a4dec48912dc6b8a34c163, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8745443132927928993, guid: eeb017b794a4dec48912dc6b8a34c163, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
