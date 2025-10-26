@@ -1,0 +1,1042 @@
+fileFormatVersion: 2
+guid: 9c02b2b6455cb3440be03fdd970e5db2
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Spritesheet_Desnutrido_v01_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2160
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23dadca09b121494397312ff3e3baead
+      internalID: -1168562601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Desnutrido_v01_1
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 2160
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c0abe52a01b3bf4db2abab9436ce162
+      internalID: 149526718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Desnutrido_v01_2
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 2160
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cab72718109bbe4b83bfd792a00579c
+      internalID: 165811642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Desnutrido_v01_3
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 2160
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e33a915f231cb2549b46db4d97b84137
+      internalID: -516968096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Desnutrido_v01_4
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 2160
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e010c5a95bead484bb935f63169278ed
+      internalID: 2110740749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Desnutrido_v01_5
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 2160
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4506ac0bdea286f48871ee00582dbe62
+      internalID: -261944580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Desnutrido_v01_6
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 2160
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 274a51cbdeabdfe42a23834f622b2a88
+      internalID: -1387507037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Desnutrido_v01_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1800
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb620e8a5400a7940be0b01ecec3b86e
+      internalID: 1769649690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Desnutrido_v01_8
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 1800
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd36ca3d58292a540bc5ad7e460ac037
+      internalID: 1725480837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Desnutrido_v01_9
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1800
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9eae933c257a92438281819e3337b60
+      internalID: -30710881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Desnutrido_v01_10
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 1800
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 074a188f22b47124d8c7c42c8743b978
+      internalID: 1095592515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Desnutrido_v01_11
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1800
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 618513ffa7fab1a429e4fe91d34e68a2
+      internalID: -1525445133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Desnutrido_v01_12
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 1800
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa644513ad9e9b04bb0278e7fb3a796f
+      internalID: 1116096888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Desnutrido_v01_13
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 1800
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4ecdfa5e78bfb849ae3216bfcc792bf
+      internalID: -1935383038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Desnutrido_v01_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1440
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f102ba6ca3f06ce48896183aa161001f
+      internalID: 888405475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Desnutrido_v01_15
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 1440
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 708c55b6f6969d64da9fe29542a9ce2c
+      internalID: 1092570449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Desnutrido_v01_16
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1440
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ca4fbd141431774585324a784437092
+      internalID: -59787105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Desnutrido_v01_17
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 1440
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2dcf632834f0f24e90409504f45e482
+      internalID: -1357217194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Desnutrido_v01_18
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1440
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cbdfa12c7a4a1c43adaeccea8b3fe54
+      internalID: -120317755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Desnutrido_v01_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1080
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9de953805443177489893a2785b5bd52
+      internalID: -272770016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Desnutrido_v01_20
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 1080
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a811a765c0d0b7a4d90a8fc661fe6dec
+      internalID: 273174201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Desnutrido_v01_21
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1080
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d15e92f491da8d419302afeb3ad2867
+      internalID: 808265200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Desnutrido_v01_22
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 1080
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b267b35ccffd7b74aa82f4ba7f6aedc7
+      internalID: -1737224946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Desnutrido_v01_23
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1080
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28845b65bd25d8444a44279d0fe3f1d3
+      internalID: 1659665189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Desnutrido_v01_24
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 1080
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d86bac90f824c54693e68039be7eb05
+      internalID: 1002627635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Desnutrido_v01_25
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 1080
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 787c64c04af850942bae689f5f0631a0
+      internalID: 419636152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Desnutrido_v01_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 720
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eefc57051e04c64d98b1485c6392e36
+      internalID: 934931384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Desnutrido_v01_27
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 720
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1443bc9601622544afdbc8259fb99c7
+      internalID: 104474040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Desnutrido_v01_28
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 720
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1595613ad7b31b941a85f3db5c7ca542
+      internalID: 543335560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Desnutrido_v01_29
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 720
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cb5c54a05d7b69479de86e7c9956d01
+      internalID: 1471049630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Desnutrido_v01_30
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 720
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 846e88fa93fd80c4bbadc691af7a3c24
+      internalID: -1305683500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Desnutrido_v01_31
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 720
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 972f9e08b36c7614d8bf2d27961d7fe8
+      internalID: -2007170074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Desnutrido_v01_32
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 720
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df5533d9d1e380c459667921d7dccf14
+      internalID: -1140687984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Desnutrido_v01_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 360
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 664447947987f7f4caa1e857fe317792
+      internalID: 1633439962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Desnutrido_v01_34
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 360
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f92f01e6233457439e6ee36b9d2eade
+      internalID: 626794802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Desnutrido_v01_35
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 360
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa49b876e9268ef479683fac685d5bd5
+      internalID: -1167887376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Desnutrido_v01_36
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 360
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b475347ea5a94f1469be80e08445806f
+      internalID: -745957229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Desnutrido_v01_37
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 360
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69f5f181a7095be418a60dce7cc6b6e6
+      internalID: -1992507818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Desnutrido_v01_38
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 360
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8943e5caf1273fd46ba8124f9a4543aa
+      internalID: -295386944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Desnutrido_v01_39
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 360
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7de9e8dc37fadc84c8c70fbfb52e5cca
+      internalID: 1137123967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet_Desnutrido_v01_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c477e0ffe70faa646a550c4d5ce07ecb
+      internalID: -43689687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Spritesheet_Desnutrido_v01_0: -1168562601
+      Spritesheet_Desnutrido_v01_1: 149526718
+      Spritesheet_Desnutrido_v01_10: 1095592515
+      Spritesheet_Desnutrido_v01_11: -1525445133
+      Spritesheet_Desnutrido_v01_12: 1116096888
+      Spritesheet_Desnutrido_v01_13: -1935383038
+      Spritesheet_Desnutrido_v01_14: 888405475
+      Spritesheet_Desnutrido_v01_15: 1092570449
+      Spritesheet_Desnutrido_v01_16: -59787105
+      Spritesheet_Desnutrido_v01_17: -1357217194
+      Spritesheet_Desnutrido_v01_18: -120317755
+      Spritesheet_Desnutrido_v01_19: -272770016
+      Spritesheet_Desnutrido_v01_2: 165811642
+      Spritesheet_Desnutrido_v01_20: 273174201
+      Spritesheet_Desnutrido_v01_21: 808265200
+      Spritesheet_Desnutrido_v01_22: -1737224946
+      Spritesheet_Desnutrido_v01_23: 1659665189
+      Spritesheet_Desnutrido_v01_24: 1002627635
+      Spritesheet_Desnutrido_v01_25: 419636152
+      Spritesheet_Desnutrido_v01_26: 934931384
+      Spritesheet_Desnutrido_v01_27: 104474040
+      Spritesheet_Desnutrido_v01_28: 543335560
+      Spritesheet_Desnutrido_v01_29: 1471049630
+      Spritesheet_Desnutrido_v01_3: -516968096
+      Spritesheet_Desnutrido_v01_30: -1305683500
+      Spritesheet_Desnutrido_v01_31: -2007170074
+      Spritesheet_Desnutrido_v01_32: -1140687984
+      Spritesheet_Desnutrido_v01_33: 1633439962
+      Spritesheet_Desnutrido_v01_34: 626794802
+      Spritesheet_Desnutrido_v01_35: -1167887376
+      Spritesheet_Desnutrido_v01_36: -745957229
+      Spritesheet_Desnutrido_v01_37: -1992507818
+      Spritesheet_Desnutrido_v01_38: -295386944
+      Spritesheet_Desnutrido_v01_39: 1137123967
+      Spritesheet_Desnutrido_v01_4: 2110740749
+      Spritesheet_Desnutrido_v01_40: -43689687
+      Spritesheet_Desnutrido_v01_5: -261944580
+      Spritesheet_Desnutrido_v01_6: -1387507037
+      Spritesheet_Desnutrido_v01_7: 1769649690
+      Spritesheet_Desnutrido_v01_8: 1725480837
+      Spritesheet_Desnutrido_v01_9: -30710881
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

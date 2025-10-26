@@ -13,6 +13,7 @@ public class PuzzleManager : MonoBehaviour
     [SerializeField] private GameObject cellsParent;
     [SerializeField] private List<PossiblePaths> possiblePaths;
     [SerializeField] private RectTransform endPoint;
+    [SerializeField] private Animator animPanelFin;
 
     private void Start()
     {
@@ -107,6 +108,7 @@ public class PuzzleManager : MonoBehaviour
     {
         panelWin.SetActive(true);
         oneStar.SetActive(true);
+        animPanelFin.Play("ComerDesnutrido");
         SFXManager.Instance.PlaySFX("HamsterWin", false);
     }
 
@@ -115,6 +117,7 @@ public class PuzzleManager : MonoBehaviour
         panelWin.SetActive(true);
         oneStar.SetActive(true);
         twoStar.SetActive(true);
+        animPanelFin.Play("ComerDesnutrido");
         SFXManager.Instance.PlaySFX("HamsterWin", false);
     }
 
@@ -124,6 +127,7 @@ public class PuzzleManager : MonoBehaviour
         oneStar.SetActive(true);
         twoStar.SetActive(true);
         threeStar.SetActive(true);
+        animPanelFin.Play("ComerDesnutrido");
         SFXManager.Instance.PlaySFX("HamsterWin", false);
     }
 
