@@ -2,11 +2,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Linq;
+using System.Collections;
 
 public class PuzzleManager : MonoBehaviour
 {
     [SerializeField] private HamsterController hamsterControl;
     [SerializeField] private GameObject panelWin;
+    [SerializeField] private GameObject panelPopUp;
     [SerializeField] private GameObject oneStar;
     [SerializeField] private GameObject twoStar;
     [SerializeField] private GameObject threeStar;
@@ -14,6 +16,7 @@ public class PuzzleManager : MonoBehaviour
     [SerializeField] private List<PossiblePaths> possiblePaths;
     [SerializeField] private RectTransform endPoint;
     [SerializeField] private Animator animPanelFin;
+    [SerializeField] private Animator animPanelExplot;
 
     private void Start()
     {
@@ -21,6 +24,7 @@ public class PuzzleManager : MonoBehaviour
         oneStar.SetActive(false);
         twoStar.SetActive(false);
         threeStar.SetActive(false);
+        panelPopUp.SetActive(false);
 
         PieceCounterManager counterManager = FindObjectOfType<PieceCounterManager>();
         counterManager.InitializeCounters();
@@ -53,6 +57,7 @@ public class PuzzleManager : MonoBehaviour
 
         if (matchedPath == null || hamsterControl.isMoving)
         {
+            StartCoroutine(ShowPopUpPanel());
             ResetPuzzle(allCells);
             return;
         }
@@ -86,6 +91,18 @@ public class PuzzleManager : MonoBehaviour
                 hamsterControl.StartPath(pathToFollow, () => { FinThreeStar(); });
                 break;
         }
+    }
+
+    private IEnumerator ShowPopUpPanel()
+    {
+        panelPopUp.SetActive(true);
+
+        if (animPanelExplot != null)
+            animPanelExplot.Play("ExplotGordo");
+
+        SFXManager.Instance.PlaySFX("Error");
+        yield return new WaitForSeconds(5f);
+        panelPopUp.SetActive(false);
     }
 
     private void ResetPuzzle(CorrectPieces[] allCells)
